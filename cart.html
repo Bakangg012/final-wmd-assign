@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="eazys_cars.css">
+    <script src="LogInauth.js" defer></script>
+
+    <style>
+.cart-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Cart Title */
+.cart-title {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Cart Items List */
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#cart-items li {
+    padding: 15px;
+    background: #ecf0f1;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items li span {
+    font-weight: bold;
+}
+
+#cart-items li .remove-item {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#cart-items li .remove-item:hover {
+    background-color: #c0392b;
+}
+
+/* Total Price */
+.total-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #16a085;
+}
+
+/* Button Container */
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Clear Cart Button */
+.clear-cart-btn {
+    padding: 12px 25px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.clear-cart-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Back to Shopping Button */
+.back-shopping-btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #2980b9;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.back-shopping-btn:hover {
+    background-color: #3498db;
+}
+
+    </style>
+    
+</head>
+<body>
+
+    <!-- Cart Container -->
+    <div class="cart-container">
+        <h1 class="cart-title">Your Cart</h1>
+
+        <!-- Cart Items List -->
+        <ul id="cart-items" class="cart-items"></ul>
+
+        <!-- Total Price -->
+        <p id="total-price" class="total-price">Total: $0</p>
+
+        <!-- Buttons -->
+        <div class="cart-buttons">
+            <button onclick="clearCart()" class="clear-cart-btn">Clear Cart</button>
+            <a href="cars.html" class="back-shopping-btn">Back to Shopping</a>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+
+</body>
+</html>
